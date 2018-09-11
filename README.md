@@ -1,1 +1,1 @@
-# Resin.io 
+# Amherst Example Resin.IO project

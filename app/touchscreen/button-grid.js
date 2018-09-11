@@ -1,3 +1,5 @@
+/// <reference path="../types/pitft.d.ts" />
+
 var touchscreen = require("pitft-touch");
 var fb = require("pitft")("/dev/fb1", true); // run 'npm install pitft' in the example directory
 

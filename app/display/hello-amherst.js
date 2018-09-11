@@ -1,3 +1,5 @@
+/// <reference path="../types/pitft.d.ts" />
+
 var fb = require("pitft")("/dev/fb1", true);
 
 module.exports = function () {

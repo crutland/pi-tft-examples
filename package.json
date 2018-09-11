@@ -1,6 +1,6 @@
 {
-  "name": "resin-pitft-rpi",
-  "description": "Display a clock on piTFT screen",
+  "name": "amherst-pi-tft-examples",
+  "description": "Amherst",
   "repository": {
     "type": "git",
     "url": ""

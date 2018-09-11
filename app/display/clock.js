@@ -1,3 +1,5 @@
+/// <reference path="../types/pitft.d.ts" />
+
 var pitft = require("pitft");
 
 module.exports = function () {
