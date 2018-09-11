@@ -1,5 +1,5 @@
 # Use base image for device arch with node installed
-FROM resin/raspberry-pi-node
+FROM resin/raspberrypi-node
 
 RUN apt-get update && apt-get install libcairo2-dev
 
