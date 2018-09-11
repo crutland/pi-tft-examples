@@ -36,6 +36,7 @@ module.exports = function () {
   var onTouch = function (err, data) {
     var msg = "Touched at (" + data.x + "," + data.y + ")";
     drawToCenter(msg, true);
+    setTimeout(function() { drawToCenter("Click Me", false); }, 2000);
   }
 
   touchscreen("/dev/input/touchscreen0", onTouch);
