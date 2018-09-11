@@ -12,8 +12,9 @@ var xMax = fb.size().width;
 var yMax = fb.size().height;
 
 var draw = function() {
+  console.log("drawing");
   fb.clear();
-  fb.color(1, 1, 1);
+  fb.color(0, 0, 0);
   fb.font("fantasy", 14);
   fb.text(0, 0, "Hello World", false, 0);
   fb.blit();
@@ -21,6 +22,7 @@ var draw = function() {
 
 draw();
 
+setInterval(draw, 100);
 // var radius = yMax / 2 - 10;
 // var imageFilePath = __dirname + "/raspberry-pi-icon.png";
 // var RA = 180 / Math.PI;
