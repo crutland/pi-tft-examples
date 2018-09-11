@@ -8,7 +8,6 @@ module.exports = function () {
   console.log("starting node.js script...")
 
   // Clear the back buffer
-  fb.clear();
 
   var xMax = fb.size().width;
   var yMax = fb.size().height;
@@ -31,17 +30,24 @@ module.exports = function () {
     fb.blit();
   }
 
-  drawToCenter("Click Me", false);
+  var drawInitialMessage = function () {
+    drawToCenter("Click Me", false);
+  }
 
   var onTouch = function (err, data) {
+    // properties on data:
+    //     x, y, stop, and touch. not sure what stop is, 
+    //     but touch is 1 for the down event, and 0 for the up event
     if (!data.touch) {
-      console.log("released");
-      return;
+      //clear the screen 1 second after you release
+      setTimeout(drawInitialMessage, 1000);
+    } else {
+      //write a touched message to the screen
+      var msg = "Touched at (" + data.x + "," + data.y + ")";
+      drawToCenter(msg, true);
     }
-    var msg = "Touched at (" + data.x + "," + data.y + ")";
-    drawToCenter(msg, true);
-    setTimeout(function () { drawToCenter("Click Me!", false); }, 2000);
   }
 
   touchscreen("/dev/input/touchscreen0", onTouch);
+  drawInitialMessage();
 }
