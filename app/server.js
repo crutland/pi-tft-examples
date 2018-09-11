@@ -13,8 +13,9 @@ var yMax = fb.size().height;
 
 var draw = function() {
   fb.clear();
+  fb.color(1, 1, 1);
   fb.font("fantasy", 14);
-  fb.text(0, 0, "Hello World", true, 0, false);
+  fb.text(0, 0, "Hello World", false, 0);
   fb.blit();
 }
 
