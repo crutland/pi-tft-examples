@@ -18,7 +18,7 @@ var draw = function () {
   fb.rect(0, 0, xMax, yMax);
   fb.color(1, 1, 1);
   fb.font("fantasy", 34);
-  fb.text(10, yMax, "Hello Amherst!", true);
+  fb.text(xMax, yMax / 2, "Hello Amherst!", true);
   fb.blit();
 }
 
