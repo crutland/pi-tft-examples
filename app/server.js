@@ -14,11 +14,11 @@ var yMax = fb.size().height;
 var draw = function () {
   console.log("drawing");
   fb.clear();
-  fb.color(1, 1, 1)
+  fb.color(0, 0, 0)
   fb.rect(0, 0, xMax, yMax);
-  fb.color(0, 0, 0);
+  fb.color(1, 1, 1);
   fb.font("fantasy", 34);
-  fb.text(10, yMax / 2, "Hello World");
+  fb.text(10, yMax / 2, "Hello World", true);
   fb.blit();
 }
 
