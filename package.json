@@ -1,5 +1,5 @@
 {
-  "name": "resin-piTFT-rpi",
+  "name": "resin-pitft-rpi",
   "description": "Display a clock on piTFT screen",
   "repository": {
     "type": "git",
@@ -10,7 +10,8 @@
   },
   "version": "0.0.3",
   "dependencies": {
-    "pitft": "~0.0.11"
+    "pitft": "~0.0.11",
+    "pitft-touch": "~0.0.6"
   },
   "engines": {
     "node": "0.10.22"
