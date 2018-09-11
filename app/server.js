@@ -17,11 +17,11 @@ var draw = function () {
   fb.color(1, 1, 1)
   fb.rect(0, 0, xMax, yMax);
   fb.color(0, 0, 0);
-  fb.font("fantasy", 14);
+  fb.font("fantasy", 34);
   fb.text(10, yMax / 2, "Hello World");
   fb.blit();
 }
 
 draw();
 
-setInterval(draw, 100);
+setInterval(draw, 5000);
