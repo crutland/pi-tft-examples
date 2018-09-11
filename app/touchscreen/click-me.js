@@ -34,10 +34,13 @@ module.exports = function () {
   drawToCenter("Click Me", false);
 
   var onTouch = function (err, data) {
-    console.log(data);
+    if (!data.touch) {
+      console.log("released");
+      return;
+    }
     var msg = "Touched at (" + data.x + "," + data.y + ")";
     drawToCenter(msg, true);
-    setTimeout(function() { drawToCenter("Click Me!", false); }, 2000);
+    setTimeout(function () { drawToCenter("Click Me!", false); }, 2000);
   }
 
   touchscreen("/dev/input/touchscreen0", onTouch);
