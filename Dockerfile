@@ -1,5 +1,7 @@
 # Use base image for device arch with node installed
-FROM resin/raspberrypi-node
+#FROM resin/raspberrypi-node
+
+FROM resin/raspberry-pi-node
 
 RUN apt-get update && apt-get install libcairo2-dev
 
@@ -13,7 +15,8 @@ WORKDIR /usr/src/app
 COPY package.json ./
 
 #install node dependencies
-RUN JOBS=MAX npm install --unsafe-perm --production && npm cache clean
+#RUN JOBS=MAX npm install --unsafe-perm --production && npm cache clean
+RUN npm install --unsafe-perm --production && npm cache clean
 
 # Copy all of files here for caching purposes
 COPY /app ./
