@@ -14,6 +14,7 @@ module.exports = function () {
 
   var radius = yMax / 2 - 10;
   var imageFilePath = __dirname + "/resources/raspberry-pi-icon.png";
+  console.log(imageFilePath);
   var RA = 180 / Math.PI;
 
   var drawDial = function () {
