@@ -12,6 +12,8 @@ module.exports = function () {
   var xMax = fb.size().width;
   var yMax = fb.size().height;
 
+  console.log("fb.size(): ", fb.size());
+
   var drawToCenter = function (text, invert) {
     fb.clear();
     if (invert) {
